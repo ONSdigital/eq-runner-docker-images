@@ -12,10 +12,10 @@ jobs:
         images: [eq-k8s-helm-deploy-image, eq-terraform-deploy-image, eq-python-deploy-image, eq-tinyproxy-image]
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Set Tag and SHA
         run: |
-          CLEAN_TAG=$(echo "${{ github.event.pull_request.head.ref  }}"  | tr / -)
+          CLEAN_TAG=$(echo "${{ github.event.pull_request.head.ref }}" | tr / -)
           echo "TAG=$CLEAN_TAG" >> $GITHUB_ENV
           echo "SHA=${{ github.event.pull_request.head.sha }}" >> $GITHUB_ENV
       - name: Build
