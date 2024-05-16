@@ -1,11 +1,11 @@
 build-k8s-helm-image:
-	docker build ./eq-k8s-helm-deploy-image -t eq-k8s-helm-deploy-image:latest
+	docker build -t k8s-helm-deploy-image:latest -f eq-k8s-helm-deploy-image/Dockerfile .
 
 build-terraform-image:
-	docker build ./eq-terraform-deploy-image -t eq-terraform-deploy-image:latest
+	docker build -t terraform-deploy-image:latest -f eq-terraform-deploy-image/Dockerfile .
 
 build-python-image:
-	docker build ./eq-python-deploy-image -t eq-python-deploy-image:latest
+	docker build -t python-deploy-image:latest -f eq-python-deploy-image/Dockerfile .
 
 build-tinyproxy-image:
-	docker build ./eq-tinyproxy-image -t eq-tinyproxy-image:latest
+	docker build -t tinyproxy-image:latest -f eq-tinyproxy-image/Dockerfile .
