@@ -3,7 +3,7 @@
 This repository contains Dockerfiles used to build base images for:
 - Deploying eQ container with helm ([k8s-helm-deploy-image](eq-k8s-helm-deploy-image/Dockerfile))
 - Building the eQ Terraform base image ([terraform-deploy-image](eq-terraform-deploy-image/Dockerfile))
-- Building the Tinyproxy image used for eq-runner-concourse [tinyproxy-image](eq-tinyproxy-image/Dockerfile)
+- Building the Tinyproxy image [tinyproxy-image](eq-tinyproxy-image/Dockerfile)
 - Building the eQ Python deploy image [python-deploy-image](eq-python-deploy-image/Dockerfile)
 
 The first three images are used in Concourse pipelines to run the tasks above and the final image is used to connect to Concourse Kubernetes.
