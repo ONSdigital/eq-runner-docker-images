@@ -15,8 +15,7 @@ ENV PATH /google-cloud-sdk/bin:$PATH
 RUN apk add --no-cache python3 bash jq git curl && \
     git clone https://github.com/tfutils/tfenv.git ~/.tfenv && \
 	ln -s /root/.tfenv/bin/* /usr/local/bin && \
-	tfenv install 1.7.3 && \
-    tfenv install 1.9.6
+	tfenv install 1.7.3
 
 # Copy binaries from the builder
 COPY --from=builder google-cloud-sdk/lib /google-cloud-sdk/lib
