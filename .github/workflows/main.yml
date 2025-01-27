@@ -4,12 +4,11 @@ on:
   push:
     branches:
       - main
-permissions:
-  contents: read
-  pull-requests: read
 
 jobs:
   docker-push:
+    permissions:
+      contents: read
     strategy:
       matrix:
         images: [eq-k8s-helm-deploy-image, eq-terraform-deploy-image, eq-python-deploy-image, eq-tinyproxy-image]
