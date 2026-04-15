@@ -16,7 +16,7 @@ docker run --name gcloud-datastore-emulator -p 8432:8432 -p 8989:8989 -e CLOUDSD
 ```
 Exec into the container by running:
 ```bash
-docker exec -i -t -u root gcloud-pubsub-emulator /bin/sh
+docker exec -i -t -u root gcloud-datastore-emulator /bin/sh
 ```
 Once in the container check the gcloud components
 ```bash
