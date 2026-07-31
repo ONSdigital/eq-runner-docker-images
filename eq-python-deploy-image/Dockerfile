@@ -11,4 +11,4 @@ RUN git clone --depth 1 --branch v2.6.12 https://github.com/pyenv/pyenv.git .pye
 
 ENV PYENV_ROOT=$HOME/.pyenv
 ENV PATH=$PYENV_ROOT/shims:$PYENV_ROOT/bin:$PATH
-RUN pyenv install 3.13.5
+RUN pyenv install 3.14.6
