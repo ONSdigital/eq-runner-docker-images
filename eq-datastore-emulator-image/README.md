@@ -6,17 +6,37 @@ This image provides a dockerised version of the [Google Cloud Datastore Emulator
 
 ### Useful commands
 
+---
+#### Building an image:
 Build a new image locally by running:
 ```sh
 docker build . -t gcloud-datastore-emulator:local
 ```
-Run a container by running:
+
+or at root level
+
+```sh
+make build-datastore-image
+```
+
+---
+#### Run a container
+
 ```bash
 docker run --name gcloud-datastore-emulator -p 8432:8432 -p 8989:8989 -e CLOUDSDK_CORE_PROJECT=local gcloud-datastore-emulator:local
 ```
+
+or if you built at root level using the `make` command:
+
+```bash
+docker run --name gcloud-datastore-emulator -p 8432:8432 -p 8989:8989 -e CLOUDSDK_CORE_PROJECT=local gcloud-datastore-emulator:local
+```
+
+---
+#### Enter the Container
 Exec into the container by running:
 ```bash
-docker exec -i -t -u root gcloud-datastore-emulator /bin/sh
+docker exec -i -t -u root <container_name> /bin/sh
 ```
 Once in the container check the gcloud components
 ```bash
