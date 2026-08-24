@@ -29,7 +29,7 @@ docker run --name gcloud-datastore-emulator -p 8432:8432 -p 8989:8989 -e CLOUDSD
 or if you built at root level using the `make` command:
 
 ```bash
-docker run --name gcloud-datastore-emulator -p 8432:8432 -p 8989:8989 -e CLOUDSDK_CORE_PROJECT=local gcloud-datastore-emulator:local
+docker run --name eq-datastore-emulator -p 8432:8432 -p 8989:8989 -e CLOUDSDK_CORE_PROJECT=local datastore-emulator-image:latest
 ```
 
 ---
